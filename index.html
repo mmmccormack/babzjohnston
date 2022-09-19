@@ -60,6 +60,7 @@
         </div>
     </div>
     <!-- carousel ends -->
+    <span class="scrollArrow">⇩</span>
     <section class="about">
         <div class="wrapper">
             <h2>Who is Barbara Johnston?</h2>
@@ -160,6 +161,20 @@
             isMenuVisible = false;
         }
     })
+
+    // hide scroll arrow 
+    const scrollArrow = document.querySelector(`.scrollArrow`);
+
+    const hideOrShowArrow = () => {
+        const scrollPos = 20;
+        let windowY = window.scrollY;
+        if (windowY > scrollPos) {
+            scrollArrow.style.display = `none`;
+        } else {
+            scrollArrow.style.display = `block`;
+        }
+    }
+    window.addEventListener(`scroll`, hideOrShowArrow);
 
     // date in footer
     const currentYear = new Date().getFullYear();

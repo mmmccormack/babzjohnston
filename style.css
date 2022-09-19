@@ -117,6 +117,30 @@
             right: 2%;
             z-index: 21;
         }
+        /* scroll arrow */
+        .scrollArrow {
+            font-size: 2rem;
+            position: absolute;
+            margin-left: auto;
+            margin-right: auto;
+            left: 0;
+            right: 0;
+            text-align: center;
+            animation: bob 5s ease infinite;
+            color: var(--dark);
+            font-size: 3rem;
+        }
+        @keyframes bob {
+            0% {
+                bottom: 0%;
+            }
+            50% {
+                bottom: 5%;
+            }
+            100% {
+                bottom: 0%;
+            }
+        }
         /* image carousel styling */
         .splide__slide img {
             width: 100%;
