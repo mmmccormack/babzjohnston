@@ -2,7 +2,8 @@
         
         .clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
         
-        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+        html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;scroll-behavior: smooth;}
+        
         
         *, *:before, *:after {box-sizing: inherit}
         
@@ -39,7 +40,7 @@
             font-family: var(--fontHeading);
             font-size: 5rem;
             text-shadow: -1px 1px 0px var(--dark), -2px 2px 1px var(--dark), -3px 3px 1px var(--dark), -4px 4px 1px var(--dark), -5px 5px 1px var(--dark), -6px 6px 1px var(--dark), -7px 7px 1px var(--dark), -8px 8px 1px var(--dark), -9px 9px 1px var(--dark), -10px 10px 0px var(--dark);
-            -webkit-text-stroke: 3px var(--white);
+            -webkit-text-stroke: 2.5px var(--white);
             -webkit-text-fill-color: var(--dark);
             font-weight: 700;
         }
@@ -186,7 +187,9 @@
         .contact-headline {
             padding: 20px 0;
         }
-        
+        .work-image {
+            min-width: 187px;
+        }
         .work-card,
         .about-container {
             display: flex;
@@ -223,9 +226,109 @@
         .lower {
             margin: 30px auto 50px auto;
         }
-        footer {
-            /* background: rgba(246, 45, 174, 0.4); */
-            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(246, 45, 174, 0.4) 20%, rgba(246, 45, 174, 0.4) 94%,rgba(246, 45, 174, 0.4) 100%);
+
+        /* work page */
+        .resume-headline {
+            height: 30vh;
+        }
+        .resume-headline-text {
+            top: 12%;
+        }
+        .headline-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .headline-section {
+            height: 70vh;
+            box-shadow: 0 0 18px 18px var(--white) inset;
+            max-width: 1120px;
+            margin: 0 auto;
+        }
+        .wannabe {
+            background: linear-gradient(180deg, rgba(245, 230, 232,0.9) 0%, rgba(245, 230, 232,0.75) 25%, rgba(245, 230, 232,0.75) 75%, rgba(245, 230, 232,0.9) 100%), url('./wannabe.jpg') 50% 50% no-repeat;
+            background-size: 100%;
+        }
+        .lovehurts {
+            background: linear-gradient(180deg, rgba(245, 230, 232,0.9) 0%, rgba(245, 230, 232,0.8) 25%, rgba(245, 230, 232,0.8) 75%, rgba(245, 230, 232,0.9) 100%), url('./loveHurts.jpeg') 50% 50% no-repeat;
+            background-size: 100%;
+        }
+        .resume > p {
+            text-align: center;
+        }
+        .booking-link {
+            padding: 0;
+        }
+        .checkboxes {
+            width: 80%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 2px solid black;
+            padding-bottom: 10px;
+            margin: 0 auto;
+        }
+        /* add custom checkbox toggles */
+
+        .switch {
+            position: relative;
+            display: block;
+            width: 80px;
+            height: 40px;
+            margin-bottom: 15px;
+        }
+        
+        .slider {
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: #2c0e37;
+            transition: .5s;
+            border: 3px solid lavender;
+            box-shadow: 4px 4px 1px rgba(0,0,0,0.1);
+        }
+        
+        .switch input {
+            width: 0;
+            height: 0;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(40px);
+            background-color: #f5e6e8;
+            border-radius: 50%;
+            height: 70%;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            top: 5px;
+            left: 4px;
+            transition: .5s;
+        }
+        
+        input:checked + .slider {
+            background-color: #f62dae;
+            border: 3px solid #f5e6e8;
+        }
+        
+        .slider.round {
+            border-radius: 35px;
+        }
+        
+        .slider.round:before {
+            width: 34%;
+            height: 70%;
+            background-color: #f5e6e8;
+            border-radius: 50%;
+        }
+        .checkbox-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 3rem;
         }
 
 
@@ -259,7 +362,7 @@
         @media (max-width: 640px) {
             h1 {
                 font-size: 3rem;
-                -webkit-text-stroke: 2px var(--white);
+                -webkit-text-stroke: 1.5px var(--white);
             }
             .about-container {
                 padding: 0;
@@ -289,5 +392,19 @@
             }
             h5 {
                 font-size: 1rem;
+            }
+            .resume-headline {
+                height: 20vh;
+            }
+            .checkboxes {
+                width: 100%;
+            }
+            .checkbox-container {
+                font-size: 1rem;
+                line-height: 2rem;
+            }
+            .wannabe,
+            .lovehurts {
+                background-size: auto;
             }
         }
