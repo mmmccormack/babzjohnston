@@ -165,21 +165,33 @@
             bottom: -9px;
         }
         /* section colours */
-        .about {
+        /* .about {
             background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(6,214,160,0.4) 6%, rgba(6,214,160,0.4) 94%,rgba(0,0,0,0) 100%);
-        }
+        } */
         .contact {
             background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,180,216,0.4) 6%, rgba(0,180,216,0.4) 94%,rgba(0,0,0,0) 100%);
         }
         .about {
-            padding: 50px 0;
+            padding: 50px 0 0 0;
         }
         .about-headshot {
             width: 50%;
-            max-width: 400px;
+            max-width: 350px;
+            position: relative;
         }
-        img {
+        .headshot-backing {
+            background-color: var(--dark);
             width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -10;
+            top: -20px;
+            right: 20px;
+            border-radius: 30px;
+        }
+        .about-headshot img {
+            width: 100%;
+            border-radius: 30px;
         }
         .work-headline {
             padding: 50px 0;
@@ -202,6 +214,9 @@
         .contact-container {
             padding: 0 40px 40px 40px;
         }
+        .about-container {
+            margin-top: 40px;
+        }
         .even-image-card {
             order: 1;
         }
@@ -213,7 +228,8 @@
             padding: 20px;
         }
         .about-copy {
-            width: 50%;
+            margin-left: 10px;
+            width: calc(50% - 10px);
         }
         .copy-title {
             margin: 0;
@@ -367,6 +383,9 @@
             .about-container {
                 padding: 0;
             }
+            .about-headshot {
+                width: 100%;
+            }
             .about-copy {
                 width: 100%;
             }
@@ -383,9 +402,7 @@
                 font-size: 2.5rem;
                 -webkit-text-stroke: 1px var(--white);
             }
-            .about-headshot {
-                width: 100%;
-            }
+
             p,
             a {
                 font-size: 1rem;
