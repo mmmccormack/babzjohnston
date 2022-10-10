@@ -260,6 +260,7 @@
             box-shadow: 0 0 18px 18px var(--white) inset;
             max-width: 1120px;
             margin: 0 auto;
+            position: relative;
         }
         .wannabe {
             background: linear-gradient(180deg, rgba(245, 230, 232,0.9) 0%, rgba(245, 230, 232,0.75) 25%, rgba(245, 230, 232,0.75) 75%, rgba(245, 230, 232,0.9) 100%), url('./wannabe.jpg') 50% 50% no-repeat;
@@ -273,7 +274,14 @@
             text-align: center;
         }
         .booking-link {
-            padding: 0;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 210px;
+        }
+        .booking-link a {
+            padding: 20px;
         }
         .checkboxes {
             width: 80%;
