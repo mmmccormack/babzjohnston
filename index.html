@@ -13,7 +13,7 @@
     <script src="https://kit.fontawesome.com/fbc2e650be.js" crossorigin="anonymous"></script>
     <script src="./splide.min.js"></script>
     <script src="./splide-extension-auto-scroll.min.js"></script>
-    <title>Babz Johnston</title>
+    <title>Barbara Johnston</title>
 </head>
 <body>
     <div class="wrapper">
@@ -37,10 +37,10 @@
             </div>
             <nav class="mobile-nav">
                 <ul class="mobile-nav-list">
-                    <li><a href="#about">about</a></li>
-                    <li><a href="./work.html">work</a></li>
-                    <li><a href="#events">events</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a class="dark-menu" href="#about">about</a></li>
+                    <li><a class="dark-menu" href="./work.html">work</a></li>
+                    <li><a class="dark-menu" href="#events">events</a></li>
+                    <li><a class="dark-menu" href="#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,7 +49,7 @@
     <!-- carousel of hero images -->
     <div class="image-carousel">
         <div class="splide" role="group">
-            <h1>Babz Johnston</h1>
+            <h1>Barbara Johnston</h1>
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide"><img src="./barb4.jpg" alt=""></li>
@@ -67,12 +67,14 @@
             <!-- <h2>Who is Babz Johnston?</h2> -->
             <div class="about-container">
                 <div class="about-headshot">
-                    <div class="headshot-backing"></div>
+                    <!-- <div class="headshot-backing"></div> -->
                     <img src="./headshot.jpg" alt="">
                 </div>
                 <div class="about-copy">
-                    <p>Write about who you are, why you're awesome, and why everyone is going to want to work with you. Include some nice personal details as well. 2ish paragraphs should be plenty.</p>
-                    <p>Write about who you are, why you're awesome, and why everyone is going to want to work with you. Include some nice personal details as well. 3ish paragraphs should be plenty.</p>
+                    <p class="quote">“She’s like Lucille Ball, if Lucille Ball could sing…”<br>-Michael Sparaga (Filmmaker/arts critic)</p>
+                    <p>Barbara (Babz) Johnston is a multiple Dora nominated performer, writer, director and choreographer.  She is best known for her onstage persona “BABZ’; the host of multiple ‘one woman PLUS special guests’ variety shows including the annual Holiday spectacular “JINGLE BABZ & FRIENDS” and the critically acclaimed “BUBBLE BABZ: Songs from the Tub”.  She is an active writer in the Canadian musical theatre scene; collaborating on multiple projects with some of the country’s most prolific Dora Award Winning writers: Anika Johnson, Suzy Wilde and Nick Green.</p>
+                    <p>Barbara has choreographed for hit TV shows ‘Ginny & Georgia’ and ‘Orphan Black’ and choreographed/assistant directed the Canadian premiere of the critically-acclaimed musical Dr. Silver: A Celebration of Life (The Musical Stage Company/Outside the March). </p>
+                    <p>Beyond her work in musical theatre and TV/film, Barbara is known for being a co-founder/director of WANNABE: A Spice Girls Tribute where has toured as Ginger Spice; performing to sold out shows across the globe for over a decade. She fronts country band ‘Love Hurts’ and portrays Gwen Stefani in the No Doubt Tribute band ‘Spiderwebs’. </p>
                 </div>
             </div>
         </div>
@@ -87,7 +89,7 @@
             <h2 class="work-headline">What's Coming Up</h2>
             <div class="work-card">
                 <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
+                    <img src="https://placekitten.com/187/187" alt="">
                 </div>
                 <div class="copy-container">
                     <h3 class="copy-title">Write up about work</h3>
@@ -97,7 +99,7 @@
             </div>
             <div class="work-card">
                 <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
+                    <img src="https://placekitten.com/187/187" alt="">
                 </div>
                 <div class="copy-container">
                     <h3 class="copy-title">Write up about work</h3>
@@ -107,7 +109,7 @@
             </div>
             <div class="work-card">
                 <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
+                    <img src="https://placekitten.com/187/187" alt="">
                 </div>
                 <div class="copy-container">
                     <h3 class="copy-title">Write up about work</h3>
@@ -153,11 +155,8 @@
             </div>
         </div>
     </section>
-    <div class="solid-line lower">
-        <div class="diag-square"></div>
-    </div>
     <footer>
-        <h5>&copy; <span class="current-year"></span> Babz Johnston</h5>
+        <h5>&copy; <span class="current-year"></span> Barbara Johnston</h5>
         <nav class="footer-nav">
             <ul class="footer-social-list">
                 <li><a href="#"><i class="fa fa-brands fa-instagram"></i></a></li>
@@ -173,23 +172,38 @@
     const burgerMenu = document.querySelector('.burger-menu');
     let isMenuVisible = false;
     burgerMenu.addEventListener('click', () => {
+        menuVisibilityCheck();
+    });
+
+    const menuVisibilityCheck = () => {
+        const burgerIcon = document.querySelector('.burger-menu a');
         const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavList = document.querySelectorAll('.social-list li a');
         if (!isMenuVisible) {
             mobileNav.classList.remove('mobile-nav-invisible');
             mobileNav.classList.add('mobile-nav-visible');
+            for (i = 0; i < mobileNavList.length; i++) {
+                mobileNavList[i].classList.add('dark-menu');
+            }
+            burgerIcon.classList.add('dark-menu')
             isMenuVisible = true;
         } else {
             mobileNav.classList.remove('mobile-nav-visible');
+            for (i = 0; i < mobileNavList.length; i++) {
+                // mobileNavList[i].classList.add('regular-menu');
+                mobileNavList[i].classList.remove('dark-menu');
+            }
+            // burgerIcon.classList.add('regular-menu');
+            burgerIcon.classList.remove('dark-menu');
             isMenuVisible = false;
+
         }
-    });
+    }
 
     const mobileSelectors = document.querySelectorAll('.mobile-nav-list li a');
     mobileSelectors.forEach(selector => {
-        const mobileNav = document.querySelector('.mobile-nav');
         selector.addEventListener('click', () => {
-        mobileNav.classList.remove('mobile-nav-visible');
-        isMenuVisible = false;
+            menuVisibilityCheck();
         });
     });
 

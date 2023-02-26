@@ -7,11 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@300&family=Poppins:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./splide-core.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/fbc2e650be.js" crossorigin="anonymous"></script>
     <script src="./splide.min.js"></script>
     <script src="./splide-extension-auto-scroll.min.js"></script>
-    <title>Babz Johnston</title>
+    <title>Barbara Johnston</title>
 </head>
 <body>
     <div class="wrapper">
@@ -36,145 +37,128 @@
             <nav class="mobile-nav">
                 <ul class="mobile-nav-list">
                     <li style="visibility:hidden;"><a href="">work</a></li>
-                    <li><a href="./index.html#about">about</a></li>
-                    <li><a href="./index.html#events">events</a></li>
-                    <li><a href="./index.html#contact">contact</a></li>
+                    <li><a class="dark-menu" href="./index.html#about">about</a></li>
+                    <li><a class="dark-menu" href="./index.html#events">events</a></li>
+                    <li><a class="dark-menu" href="./index.html#contact">contact</a></li>
                 </ul>
             </nav>
         </header>
     </div>
     
-    <div class="resume-headline">
-        <h1 class="resume-headline-text">work</h1>
+    <!-- carousel of hero images -->
+    <div class="image-carousel">
+        <div class="splide" role="group">
+            <h1>work</h1>
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="./barb4.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb3.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb2.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb1.jpg" alt=""></li>
+                </ul>
+            </div>
+        </div>
     </div>
     <section class="headline-section wannabe">
-        <div class="wrapper">
-            <div class="headline-container">
-                <h2 class="work-headline">Wannabe - A Spice Girls Tribute</h2>
-                <div class="wannabe-copy">
-                    <p>Write about Wannabe here.</p>
-                    <p>Two or three paragraphs is probably cool here.</p>
-                </div>
+        <div class="headline-container">
+            <h2 class="headline-title">Wannabe - A Spice Girls Tribute</h2>
+            <div class="headline-copy">
+                <p>Write about Wannabe here.</p>
+                <p>Two or three paragraphs is probably cool here.</p>
             </div>
             <div class="booking-link">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="#" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="dark-menu" ><i class="fa fa-brands fa-youtube"></i></a>
+                <a href="#" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </section>
     <section class="headline-section lovehurts">
-        <div class="wrapper">
-            <div class="headline-container">
-                <h2 class="work-headline">Love Hurts - A Tribute to Classic Country</h2>
-                <div class="wannabe-copy">
-                    <p>Write about Love Hurts here.</p>
-                    <p>Two or three paragraphs is probably cool here.</p>
-                </div>
+        <div class="headline-container">
+            <h2 class="headline-title">Love Hurts - A Tribute to Classic Country</h2>
+            <div class="headline-copy">
+                <p>Write about Love Hurts here.</p>
+                <p>Two or three paragraphs is probably cool here.</p>
             </div>
             <div class="booking-link">
-                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#"><i class="fa fa-brands fa-youtube"></i></a>
-                <a href="#"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="#" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#" class="dark-menu" ><i class="fa fa-brands fa-youtube"></i></a>
+                <a href="#" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </section>
+    <section class="headline-section resume">
+        <div class="wrapper">
+            <div class="resume" id="resume">
+                <h2 class="work-headline resume">CV</h2>
 
-    <div class="solid-line">
-        <div class="diag-square"></div>
-    </div>
-    
-    <div class="wrapper">
-        <section class="resume" id="resume">
-            <h2 class="work-headline">CV</h2>
-            <p>Please toggle which areas of Babz's work interest you the most.</p>
-            <div class="checkboxes">
-                <div class="checkbox-container">
-                    Singing
-                    <label for="singing" class="switch">
-                        <input type="checkbox" name="singing" id="singing" checked>
-                        <span class="slider round" ></span>
-                    </label>
+                <div class="work-card sing">
+                    <div class="work-image">
+                        <img src="https://placekitten.com/187/187" alt="">
+                    </div>
+                    <div class="copy-container">
+                        <h3 class="copy-title">Write up about singing</h3>
+                        <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
+                        <a href="#">Relevant link to whatever we're talking about.</a>
+                        <!-- remove inline styling -->
+                        <ul class="resume-list" style="position:relative;top:10px;right:10px;">
+                            <li><a href="#"><i class="fa-solid fa-microphone-lines"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-pen-nib"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-music"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-person-falling"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="checkbox-container">
-                    Choreography
-                    <label for="choreography" class="switch">
-                        <input type="checkbox" name="choreography" id="choreography" checked>
-                        <span class="slider round" ></span>
-                    </label>
+                <div class="work-card chor">
+                    <div class="work-image">
+                        <img src="https://placekitten.com/187/187" alt="">
+                    </div>
+                    <div class="copy-container">
+                        <h3 class="copy-title">Write up about choreography and composition</h3>
+                        <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
+                        <a href="#">Relevant link to whatever we're talking about.</a>
+                        <!-- remove inline styling -->
+                        <ul class="resume-list" style="position:relative;top:10px;right:10px;">
+                            <li><a href="#"><i class="fa-solid fa-microphone-lines"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-pen-nib"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-music"></i></a></li>
+                            <li><a href="#"><i class="fa-solid fa-person-falling"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="checkbox-container">
-                    Playwriting
-                    <label for="playwriting" class="switch">
-                        <input type="checkbox" name="playwriting" id="playwriting" checked>
-                        <span class="slider round" ></span>
-                    </label>
+                <div class="work-card chor">
+                    <div class="work-image">
+                        <img src="https://placekitten.com/187/187" alt="">
+                    </div>
+                    <div class="copy-container">
+                        <h3 class="copy-title">Write up about choreography</h3>
+                        <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
+                        <a href="#">Relevant link to whatever we're talking about.</a>
+                    </div>
                 </div>
-                <div class="checkbox-container">
-                    Composition
-                    <label for="composition" class="switch">
-                        <input type="checkbox" name="composition" id="composition" checked>
-                        <span class="slider round" ></span>
-                    </label>
+                <div class="work-card play">
+                    <div class="work-image">
+                        <img src="https://placekitten.com/187/187" alt="">
+                    </div>
+                    <div class="copy-container">
+                        <h3 class="copy-title">Write up about playwriting</h3>
+                        <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
+                        <a href="#">Relevant link to whatever we're talking about.</a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="work-card singing">
-                <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
-                </div>
-                <div class="copy-container">
-                    <h3 class="copy-title">Write up about singing</h3>
-                    <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
-                    <a href="#">Relevant link to whatever we're talking about.</a>
-                </div>
-            </div>
-            <div class="work-card choreography">
-                <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
-                </div>
-                <div class="copy-container">
-                    <h3 class="copy-title">Write up about choreography</h3>
-                    <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
-                    <a href="#">Relevant link to whatever we're talking about.</a>
-                </div>
-            </div>
-            <div class="work-card choreography">
-                <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
-                </div>
-                <div class="copy-container">
-                    <h3 class="copy-title">Write up about choreography</h3>
-                    <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
-                    <a href="#">Relevant link to whatever we're talking about.</a>
+                <div class="work-card comp">
+                    <div class="work-image">
+                        <img src="https://placekitten.com/187/187" alt="">
+                    </div>
+                    <div class="copy-container">
+                        <h3 class="copy-title">Write up about composition</h3>
+                        <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
+                        <a href="#">Relevant link to whatever we're talking about.</a>
+                    </div>
                 </div>
             </div>
-            <div class="work-card playwriting">
-                <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
-                </div>
-                <div class="copy-container">
-                    <h3 class="copy-title">Write up about playwriting</h3>
-                    <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
-                    <a href="#">Relevant link to whatever we're talking about.</a>
-                </div>
-            </div>
-            <div class="work-card composition">
-                <div class="work-image">
-                    <img src="https://placekitten.com/200/200" alt="">
-                </div>
-                <div class="copy-container">
-                    <h3 class="copy-title">Write up about composition</h3>
-                    <p>Brief blurb on whatever the work might be, and possibly a press quote.</p>
-                    <a href="#">Relevant link to whatever we're talking about.</a>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    <div class="solid-line lower">
-        <div class="diag-square"></div>
-    </div>
+        </div>
+    </section>
 
     <footer>
         <h5>&copy; <span class="current-year"></span> Babz Johnston</h5>
@@ -193,60 +177,90 @@
     const burgerMenu = document.querySelector('.burger-menu');
     let isMenuVisible = false;
     burgerMenu.addEventListener('click', () => {
+        menuVisibilityCheck();
+    });
+
+    const menuVisibilityCheck = () => {
+        const burgerIcon = document.querySelector('.burger-menu a');
         const mobileNav = document.querySelector('.mobile-nav');
+        const mobileNavList = document.querySelectorAll('.social-list li a');
         if (!isMenuVisible) {
             mobileNav.classList.remove('mobile-nav-invisible');
             mobileNav.classList.add('mobile-nav-visible');
+            for (i = 0; i < mobileNavList.length; i++) {
+                mobileNavList[i].classList.add('dark-menu');
+            }
+            burgerIcon.classList.add('dark-menu')
             isMenuVisible = true;
         } else {
             mobileNav.classList.remove('mobile-nav-visible');
+            for (i = 0; i < mobileNavList.length; i++) {
+                // mobileNavList[i].classList.add('regular-menu');
+                mobileNavList[i].classList.remove('dark-menu');
+            }
+            // burgerIcon.classList.add('regular-menu');
+            burgerIcon.classList.remove('dark-menu');
             isMenuVisible = false;
+
         }
-    });
+    }
 
     const mobileSelectors = document.querySelectorAll('.mobile-nav-list li a');
     mobileSelectors.forEach(selector => {
-        const mobileNav = document.querySelector('.mobile-nav');
         selector.addEventListener('click', () => {
-        mobileNav.classList.remove('mobile-nav-visible');
-        isMenuVisible = false;
+            menuVisibilityCheck();
         });
     });
 
     // toggling visible sections based on checkbox selections
-    let checkboxes = document.querySelectorAll('input[type=checkbox');
-
-    checkboxes.forEach(box => {
-        box.addEventListener("change", () => {
-            const turnOffBox = box.name
-            const subjectArray = document.querySelectorAll(`.${turnOffBox}`);
-            if (!box.checked) {
-                subjectArray.forEach(subject => {
-                    subject.style.display = 'none'
-                })
-            } else {
-                subjectArray.forEach(subject => {
-                    subject.style.display = 'flex'
-                })
-            }
-            alternateWorkCards();
-        })
-    })
+    const checkboxes = document.querySelectorAll('input[type=checkbox');
+    const workCards = document.querySelectorAll('.work-card');
 
 
-    // hide scroll arrow 
-    // const scrollArrow = document.querySelector(`.scrollArrow`);
+// list which boxes are unchecked
 
-    // const hideOrShowArrow = () => {
-    //     const scrollPos = 20;
-    //     let windowY = window.scrollY;
-    //     if (windowY > scrollPos) {
-    //         scrollArrow.style.display = `none`;
-    //     } else {
-    //         scrollArrow.style.display = `block`;
+
+// let uncheckedSwitches = [];
+//     checkboxes.forEach(box => {
+//         box.addEventListener("change", () => {
+//             checkboxes.forEach(box => {
+//                 if (!box.checked) {
+//                     uncheckedSwitches.push(box.name)
+//                 }
+//             })
+//             removeWorkCards(uncheckedSwitches)
+//             const turnOffBox = box.name
+//             const subjectArray = document.querySelectorAll(`.${turnOffBox}`);
+//             if (!box.checked) {
+//                 subjectArray.forEach(subject => {
+//                     console.log(subject)
+//                     subject.style.display = 'none'
+//                 })
+//             } else {
+//                 subjectArray.forEach(subject => {
+//                     subject.style.display = 'flex'
+//                 })
+//             }
+//             alternateWorkCards();
+//         })
+//     })
+
+    // get classList of each work card
+    // const removeWorkCards = (cardsToRemove) => {
+    //     cardsToRemove.push(cardsToRemove.join(''));
+    //     if (cardsToRemove[cardsToRemove.length - 1] === cardsToRemove[0]) {
+    //         cardsToRemove.pop();
     //     }
+    //     console.log(cardsToRemove);
+    //     cardsToRemove.forEach(card => {
+    //         const subjectArray = document.querySelectorAll(`.${card}`);
+    //         subjectArray.forEach(subject => {
+    //             subject.classList.add('invisible-work-card');
+    //         })
+    //     })
+    //     uncheckedSwitches = [];
     // }
-    // window.addEventListener(`scroll`, hideOrShowArrow);
+
 
 
 
@@ -269,6 +283,55 @@
     // date in footer
     const currentYear = new Date().getFullYear();
     document.querySelector('.current-year').innerHTML = currentYear;
+
+
+    // hide scroll arrow 
+    // const scrollArrow = document.querySelector(`.scrollArrow`);
+
+    // const hideOrShowArrow = () => {
+    //     const scrollPos = 20;
+    //     let windowY = window.scrollY;
+    //     if (windowY > scrollPos) {
+    //         scrollArrow.style.display = `none`;
+    //     } else {
+    //         scrollArrow.style.display = `block`;
+    //     }
+    // }
+    // window.addEventListener(`scroll`, hideOrShowArrow);
+
+        // properties for image carousel
+    const splide = new Splide( '.splide', {
+        arrows: false,
+        pagination: false,
+        type : 'loop',
+        focus : 'center',
+        perPage: 2,
+        breakpoints: {
+            480: {
+                perPage: 1,
+                height: '50vh',
+                width: '100%'
+            },
+        },
+        autoScroll: {
+        speed: 0.15,
+        pauseOnHover : false,
+        pauseOnFocus: false,
+        },
+        width : '100vw',
+        heightRatio: 0.5,
+		height: '80vh',
+        reducedMotion: {
+            autoScroll: {
+                speed: 0.01,
+                pauseOnHover : true,
+                pauseOnFocus: true,
+            },
+        }
+
+    });
+    splide.mount(window.splide.Extensions);
+
 
   </script>
 </html>

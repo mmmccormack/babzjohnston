@@ -13,12 +13,10 @@
 
         /* set default text styles */
 
-        /* palette too muted - need colors that pop more! */
         :root {
             --copyText: #090809;
             --dark: #2c0e37;
             --light: #f62dae;
-            --accent: #06d6a0;
             --secondary: #00b4d8;
             --white: #f5e6e8;
             --fontHeading: "Poppins", sans-serif;
@@ -28,12 +26,11 @@
             font-family: var(--fontBody);
             font-size: 125%;
             background: var(--white);
-            /* font-weight: bold; */
             overflow-x: hidden;
         }
         h1 {
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 52%;
             transform: rotate(-10deg) translate(-50%, -50%);
             transform-origin: center center;
@@ -54,12 +51,12 @@
         h5 {
             text-align: center;
         }
-        h2 {
+        /* h2 {
             margin-bottom: 0;
             padding-top: 50px;
-        }
+        } */
         h5 {
-            margin-bottom: 0;
+            margin: 0;
             padding-top: 40px;
             text-transform: uppercase;
         }
@@ -73,6 +70,7 @@
             color: var(--dark);
             text-shadow: 0.05rem 0.05rem var(--light);
             text-decoration: none;
+            transition: 1s ease;
         }
         a:hover {
             text-shadow: 0.05rem 0.05rem var(--secondary);
@@ -93,7 +91,7 @@
             top: -600px;
             left: 0;
             z-index: 20;
-            background: var(--light);
+            background: var(--dark);
             transition: top 1s ease;
         }
         .mobile-nav-invisible,
@@ -107,12 +105,23 @@
         }
         .nav-list li a,
         .social-list li a,
+        .resume-list li a,
         .footer-social-list li a,
         .mobile-nav-list li a {
             padding: 10px;
             text-decoration: none;
             text-transform: uppercase;
         }
+        /* change colour of mobile menu */
+        .dark-menu {
+            color: var(--white);
+            transition: color 1s ease;
+        }
+        /* .regular-menu {
+            color: var(--dark);
+            transition: color 1s ease;
+        } */
+
         .social-list {
             position: absolute;
             top: 0;
@@ -166,29 +175,12 @@
             bottom: -9px;
         }
         /* section colours */
-        /* .about {
-            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(6,214,160,0.4) 6%, rgba(6,214,160,0.4) 94%,rgba(0,0,0,0) 100%);
-        } */
-        .contact {
-            background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,180,216,0.4) 6%, rgba(0,180,216,0.4) 94%,rgba(0,0,0,0) 100%);
-        }
         .about {
             padding: 50px 0 0 0;
         }
         .about-headshot {
             width: 50%;
             max-width: 300px;
-            position: relative;
-        }
-        .headshot-backing {
-            background-color: var(--dark);
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            z-index: -10;
-            top: -20px;
-            right: 20px;
-            border-radius: 30px;
         }
         .about-headshot img {
             width: 100%;
@@ -197,9 +189,6 @@
         .work-headline {
             padding: 50px 0;
         }
-        .contact-headline {
-            padding: 20px 0;
-        }
         .work-image {
             min-width: 187px;
         }
@@ -207,13 +196,11 @@
         .about-container {
             display: flex;
             justify-content: center;
-            align-items: center;
             margin: 20px auto;
             position: relative;
         }
-        .about-container,
-        .contact-container {
-            padding: 40px;
+        .invisible-work-card {
+            display: none;
         }
         .about-container {
             margin-top: 40px;
@@ -226,63 +213,84 @@
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            padding: 20px;
+            padding:0 20px 20px 20px;
         }
         .about-copy {
             margin-left: 10px;
             width: calc(50% - 10px);
+        }
+        .quote {
+            font-weight: bold;
+            text-align: center;
         }
         .copy-title {
             margin: 0;
         }
         .contact {
             text-align: center;
-            margin-top: 70px;
             padding: 40px 0;
         }
         .lower {
             margin: 30px auto 50px auto;
         }
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            padding-bottom: 20px;
+        }
+        .footer-social-list li a {
+            color: var(--white)
+        }
 
         /* work page */
-        .resume-headline {
-            height: 30vh;
-        }
-        .resume-headline-text {
-            top: 12%;
+        .headline-section {
+            height: 100vh;
+            position: relative;
+            border-top: 100px solid var(--white);
         }
         .headline-container {
             display: flex;
             flex-direction: column;
-            align-items: center;
+            background-color: var(--dark);
+            color: var(--white);
+            padding: 0 20px;
+            position: absolute;
+            bottom: 0;
+            opacity: 0.8;
+            width: 100%;
         }
-        .headline-section {
-            height: 70vh;
-            box-shadow: 0 0 18px 18px var(--white) inset;
-            max-width: 1120px;
-            margin: 0 auto;
-            position: relative;
+        .headline-title,
+        .headline-copy {
+            text-align: right;
         }
         .wannabe {
-            background: linear-gradient(180deg, rgba(245, 230, 232,0.9) 0%, rgba(245, 230, 232,0.75) 25%, rgba(245, 230, 232,0.75) 75%, rgba(245, 230, 232,0.9) 100%), url('./wannabe.jpg') 50% 50% no-repeat;
-            background-size: 100%;
+            background-image: url("./wannabe.jpg");
+            background-attachment: fixed;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
         }
         .lovehurts {
-            background: linear-gradient(180deg, rgba(245, 230, 232,0.9) 0%, rgba(245, 230, 232,0.8) 25%, rgba(245, 230, 232,0.8) 75%, rgba(245, 230, 232,0.9) 100%), url('./loveHurts.jpeg') 50% 50% no-repeat;
-            background-size: 100%;
+            background-image: url("./loveHurts.jpeg");
+            background-attachment: fixed;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top: 0px;
+        }
+        .resume {
+            height: auto;
+            padding: 0 0 50px 0;
         }
         .resume > p {
             text-align: center;
         }
         .booking-link {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            min-width: 210px;
+            text-align: right;
+            padding: 20px 0;
         }
         .booking-link a {
-            padding: 20px;
+            padding-left: 40px;
         }
         .checkboxes {
             width: 80%;
@@ -384,6 +392,7 @@
             border: none;
             box-shadow: 6px 6px 0px var(--dark);
             margin: 10px;
+            border: 2px solid var(--copyText);
             border-radius: 6px;
             padding-left: 10px;
             font-family: inherit;
@@ -428,13 +437,6 @@
             .mobile-nav-list li {
                 padding: 20px;
             }
-        }
-
-        @media (max-width: 640px) {
-            h1 {
-                font-size: 3rem;
-                -webkit-text-stroke: 1.5px var(--white);
-            }
             .about-container {
                 padding: 0;
             }
@@ -447,6 +449,14 @@
             .work-card,
             .about-container {
                 flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 3rem;
+                -webkit-text-stroke: 1.5px var(--white);
             }
             .even-image-card {
                 order: 0;
@@ -484,6 +494,17 @@
             }
             .wannabe,
             .lovehurts {
-                background-size: auto;
+                background-attachment: scroll;
+                background-size: cover;
+            }
+            .headline-section:not(.lovehurts) {
+                border-top: 50px solid var(--white);
+            }
+            .headline-container {
+                position: absolute;
+                bottom: 0;
+            }
+            .resume {
+                height: auto;
             }
         }
