@@ -44,7 +44,8 @@
         }
         h1,
         h2,
-        h3 {
+        h3,
+        h5 {
             text-transform: uppercase;
         }
         h1,
@@ -53,14 +54,10 @@
         h5 {
             text-align: center;
         }
-        /* h2 {
-            margin-bottom: 0;
-            padding-top: 50px;
-        } */
+
         h5 {
             margin: 0;
             padding-top: 40px;
-            text-transform: uppercase;
         }
         i {
             font-size: 1.5rem;
@@ -193,6 +190,8 @@
         }
         .work-image {
             width: 300px;
+            display: flex;
+            align-items: center;
         }
         .work-image img {
             width: 100%;
@@ -212,6 +211,9 @@
         }
         .even-image-card {
             order: 1;
+        }
+        .more-work {
+            margin: 50px;
         }
         .copy-container,
         .about-copy {
