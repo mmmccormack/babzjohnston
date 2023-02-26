@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/fbc2e650be.js" crossorigin="anonymous"></script>
     <script src="./splide.min.js"></script>
     <script src="./splide-extension-auto-scroll.min.js"></script>
-    <title>Barbara Johnston</title>
+    <title>Barbara Johnston - Work</title>
 </head>
 <body>
     <div class="wrapper">
@@ -28,6 +28,7 @@
                     <!-- <li><a href="./work.html">work</a></li> -->
                     <li><a href="./index.html#about">about</a></li>
                     <li><a href="./index.html#events">events</a></li>
+                    <li><a href="./index.html#lessons">lessons</a></li>
                     <li><a href="./index.html#contact">contact</a></li>
                 </ul>
             </nav>
@@ -39,6 +40,7 @@
                     <li style="visibility:hidden;"><a href="">work</a></li>
                     <li><a class="dark-menu" href="./index.html#about">about</a></li>
                     <li><a class="dark-menu" href="./index.html#events">events</a></li>
+                    <li><a class="dark-menu" href="./index.html#lessons">lessons</a></li>
                     <li><a class="dark-menu" href="./index.html#contact">contact</a></li>
                 </ul>
             </nav>
@@ -52,24 +54,33 @@
             <div class="splide__track">
                 <ul class="splide__list">
                     <li class="splide__slide"><img src="./barb4.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb3.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb9.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb8.png" alt=""></li>
                     <li class="splide__slide"><img src="./barb2.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb5.jpeg" alt=""></li>
                     <li class="splide__slide"><img src="./barb1.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb6.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb3.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./barb7.jpeg" alt=""></li>
                 </ul>
             </div>
         </div>
     </div>
+    <!-- carousel ends -->
     <section class="headline-section wannabe">
         <div class="headline-container">
             <h2 class="headline-title">Wannabe - A Spice Girls Tribute</h2>
             <div class="headline-copy">
-                <p>Write about Wannabe here.</p>
-                <p>Two or three paragraphs is probably cool here.</p>
+                <p>Wannabe has been thrilling audiences and blowing the roof of concert venues across North America for the past 10 years. With giant personalities, mega-watt singing voices,
+                spot-on choreography, costume changes, English accents and platform shoes, these powerhouse women have brought Girl Power into the 21st century with their larger-than life epic shows.</p>
             </div>
             <div class="booking-link">
-                <a href="#" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="dark-menu" ><i class="fa fa-brands fa-youtube"></i></a>
-                <a href="#" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="mailto:grant@midnightagency.com?subject=Wannabe" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.facebook.com/WannabeSGT" class="dark-menu" ><i class="fa fa-brands fa-facebook"></i></a>
+                <a href="https://twitter.com/wannabesgt" class="dark-menu" ><i class="fa fa-brands fa-twitter"></i></a>
+                <a href="https://instagram.com/wannabesgt" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@wannabesgt" class="dark-menu" ><i class="fa fa-brands fa-tiktok"></i></a>
+                <a href="https://www.youtube.com/watch?v=K0k8VGUyQjI" class="dark-menu" ><i class="fa fa-brands fa-youtube"></i></a>
             </div>
         </div>
     </section>
@@ -77,13 +88,12 @@
         <div class="headline-container">
             <h2 class="headline-title">Love Hurts - A Tribute to Classic Country</h2>
             <div class="headline-copy">
-                <p>Write about Love Hurts here.</p>
-                <p>Two or three paragraphs is probably cool here.</p>
+                <p>Performing March 4th at Toronto Style Bar & Grill and April 14th at Duffy's Tavern, Toronto</p>
             </div>
             <div class="booking-link">
-                <a href="#" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
-                <a href="#" class="dark-menu" ><i class="fa fa-brands fa-youtube"></i></a>
-                <a href="#" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
+                <a href="mailto:lsostomi@gmail.com" class="dark-menu"><i class="fa-solid fa-envelope"></i></a>
+                <a href="https://www.instagram.com/p/Coc2QiTJPmI/" class="dark-menu" ><i class="fa-solid fa-video"></i></a>
+                <a href="https://instagram.com/lovefuckinghurts" class="dark-menu"><i class="fa fa-brands fa-instagram"></i></a>
             </div>
         </div>
     </section>
@@ -212,58 +222,7 @@
         });
     });
 
-    // toggling visible sections based on checkbox selections
-    const checkboxes = document.querySelectorAll('input[type=checkbox');
     const workCards = document.querySelectorAll('.work-card');
-
-
-// list which boxes are unchecked
-
-
-// let uncheckedSwitches = [];
-//     checkboxes.forEach(box => {
-//         box.addEventListener("change", () => {
-//             checkboxes.forEach(box => {
-//                 if (!box.checked) {
-//                     uncheckedSwitches.push(box.name)
-//                 }
-//             })
-//             removeWorkCards(uncheckedSwitches)
-//             const turnOffBox = box.name
-//             const subjectArray = document.querySelectorAll(`.${turnOffBox}`);
-//             if (!box.checked) {
-//                 subjectArray.forEach(subject => {
-//                     console.log(subject)
-//                     subject.style.display = 'none'
-//                 })
-//             } else {
-//                 subjectArray.forEach(subject => {
-//                     subject.style.display = 'flex'
-//                 })
-//             }
-//             alternateWorkCards();
-//         })
-//     })
-
-    // get classList of each work card
-    // const removeWorkCards = (cardsToRemove) => {
-    //     cardsToRemove.push(cardsToRemove.join(''));
-    //     if (cardsToRemove[cardsToRemove.length - 1] === cardsToRemove[0]) {
-    //         cardsToRemove.pop();
-    //     }
-    //     console.log(cardsToRemove);
-    //     cardsToRemove.forEach(card => {
-    //         const subjectArray = document.querySelectorAll(`.${card}`);
-    //         subjectArray.forEach(subject => {
-    //             subject.classList.add('invisible-work-card');
-    //         })
-    //     })
-    //     uncheckedSwitches = [];
-    // }
-
-
-
-
     // alternating image and text on work cards
     const alternateWorkCards = () => {
         const workCards = Array.from(document.querySelectorAll('.work-image'));
@@ -284,22 +243,7 @@
     const currentYear = new Date().getFullYear();
     document.querySelector('.current-year').innerHTML = currentYear;
 
-
-    // hide scroll arrow 
-    // const scrollArrow = document.querySelector(`.scrollArrow`);
-
-    // const hideOrShowArrow = () => {
-    //     const scrollPos = 20;
-    //     let windowY = window.scrollY;
-    //     if (windowY > scrollPos) {
-    //         scrollArrow.style.display = `none`;
-    //     } else {
-    //         scrollArrow.style.display = `block`;
-    //     }
-    // }
-    // window.addEventListener(`scroll`, hideOrShowArrow);
-
-        // properties for image carousel
+    // properties for image carousel
     const splide = new Splide( '.splide', {
         arrows: false,
         pagination: false,
