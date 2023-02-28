@@ -116,10 +116,6 @@
             color: var(--white);
             transition: color 1s ease;
         }
-        /* .regular-menu {
-            color: var(--dark);
-            transition: color 1s ease;
-        } */
 
         .social-list {
             position: absolute;
@@ -218,13 +214,13 @@
         .more-work {
             margin: 50px;
         }
-        .copy-container,
-        .about-copy {
+        .copy-container {
             display: flex;
             flex-direction: column;
             justify-content: space-around;
             padding: 20px 20px 20px 20px;
         }
+        .about-copy,
         .about-copy-2 {
             padding: 0 20px;
         }
@@ -393,6 +389,10 @@
             .about-copy {
                 width: 100%;
                 margin-left: 0;
+            }
+            .about-copy,
+            .about-copy-2 {
+                padding: 0;
             }
             .work-card,
             .about-container {
