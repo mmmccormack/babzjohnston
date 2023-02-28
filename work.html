@@ -205,10 +205,8 @@
         } else {
             mobileNav.classList.remove('mobile-nav-visible');
             for (i = 0; i < mobileNavList.length; i++) {
-                // mobileNavList[i].classList.add('regular-menu');
                 mobileNavList[i].classList.remove('dark-menu');
             }
-            // burgerIcon.classList.add('regular-menu');
             burgerIcon.classList.remove('dark-menu');
             isMenuVisible = false;
 
@@ -239,7 +237,7 @@
     }
     alternateWorkCards();
 
-    // date in footer
+    // add date in footer
     const currentYear = new Date().getFullYear();
     document.querySelector('.current-year').innerHTML = currentYear;
 

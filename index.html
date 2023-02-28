@@ -71,19 +71,23 @@
     <section class="about" id="about">
         <div class="wrapper">
             <!-- <h2>Who is Babz Johnston?</h2> -->
+            <div class="marquee-quote">
+                <blockquote><strong>“She’s like Lucille Ball, if Lucille Ball could sing…”</strong>
+                <p><em>Michael Sparaga (Filmmaker/arts critic)</em></p>
+                </blockquote>
+            </div>
             <div class="about-container">
                 <div class="about-headshot">
                     <!-- <div class="headshot-backing"></div> -->
                     <img src="./headshot.jpg" alt="">
                 </div>
                 <div class="about-copy">
-                    <blockquote><strong>“She’s like Lucille Ball, if Lucille Ball could sing…”</strong>
-                    <p><em>Michael Sparaga (Filmmaker/arts critic)</em></p>
-                    </blockquote>
                     <p>Barbara (Babz) Johnston is a multiple Dora nominated performer, writer, director and choreographer.  She is best known for her onstage persona “BABZ’; the host of multiple ‘one woman PLUS special guests’ variety shows including the annual Holiday spectacular “JINGLE BABZ & FRIENDS” and the critically acclaimed “BUBBLE BABZ: Songs from the Tub”.  She is an active writer in the Canadian musical theatre scene; collaborating on multiple projects with some of the country’s most prolific Dora Award Winning writers: Anika Johnson, Suzy Wilde and Nick Green.</p>
-                    <p>Barbara has choreographed for hit TV shows ‘Ginny & Georgia’ and ‘Orphan Black’ and choreographed/assistant directed the Canadian premiere of the critically-acclaimed musical Dr. Silver: A Celebration of Life (The Musical Stage Company/Outside the March). </p>
-                    <p>Beyond her work in musical theatre and TV/film, Barbara is known for being a co-founder/director of WANNABE: A Spice Girls Tribute where has toured as Ginger Spice; performing to sold out shows across the globe for over a decade. She fronts country band ‘Love Hurts’ and portrays Gwen Stefani in the No Doubt Tribute band ‘Spiderwebs’. </p>
                 </div>
+            </div>
+            <div class="about-copy-2">
+                <p>Barbara has choreographed for hit TV shows ‘Ginny & Georgia’ and ‘Orphan Black’ and choreographed/assistant directed the Canadian premiere of the critically-acclaimed musical Dr. Silver: A Celebration of Life (The Musical Stage Company/Outside the March). </p>
+                <p>Beyond her work in musical theatre and TV/film, Barbara is known for being a co-founder/director of WANNABE: A Spice Girls Tribute where has toured as Ginger Spice; performing to sold out shows across the globe for over a decade. She fronts country band ‘Love Hurts’ and portrays Gwen Stefani in the No Doubt Tribute band ‘Spiderwebs’.</p>
             </div>
         </div>
     </section>
@@ -142,11 +146,13 @@
                 <blockquote><strong>“Barb didn’t coddle us - despite working with her at such a young and impressionable age, she treated us as if we were professionals and had our own ideas on which we could build together. No matter how many years since, I always go back to what I had learned then.”</strong>
                 <p><em>Mishael Eusebio, Canadian Tenor and graduate of The Juilliard School in New York City</em></p>
                 </blockquote>
-                <p>Barbara has worked extensively in arts education for the past 15 years teaching privately as well as coaching, staging/choreographing, choral conducting, writing at/for multiple renowned Canadian arts institutions including Wexford School for the Arts, Theatre Sheridan’s ‘The Canadian Musical Theatre Project’ (CMTP), The Randolph Academy for the Performing Arts, Annex Children’s Theatre in Education (ACTE) and Lakeshore Arts.  She runs a private music studio offering private coaching in voice/vocal performance, piano and musical theatre audition prep. 
-                </p>
-                <p>Barbara is a passionate teacher who approaches every lesson with thoughtfulness, energy, and care.</p>
-                <p>Barbara Johnston is available for private lessons in Toronto’s West End. Offering private lessons in:  Vocal technique/vocal performance (all styles and levels), Piano (beginner/intermediate), Audition prep (all levels).</p>
-                <p>To inquire about private lessons, please use the contact form below.</p>
+                <div class="about-copy-2">
+                    <p>Barbara has worked extensively in arts education for the past 15 years teaching privately as well as coaching, staging/choreographing, choral conducting, writing at/for multiple renowned Canadian arts institutions including Wexford School for the Arts, Theatre Sheridan’s ‘The Canadian Musical Theatre Project’ (CMTP), The Randolph Academy for the Performing Arts, Annex Children’s Theatre in Education (ACTE) and Lakeshore Arts.  She runs a private music studio offering private coaching in voice/vocal performance, piano and musical theatre audition prep. 
+                    </p>
+                    <p>Barbara is a passionate teacher who approaches every lesson with thoughtfulness, energy, and care.</p>
+                    <p>Barbara Johnston is available for private lessons in Toronto’s West End. Offering private lessons in:  Vocal technique/vocal performance (all styles and levels), Piano (beginner/intermediate), Audition prep (all levels).</p>
+                    <p>To inquire about private lessons, please use the contact form below.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -220,10 +226,8 @@
         } else {
             mobileNav.classList.remove('mobile-nav-visible');
             for (i = 0; i < mobileNavList.length; i++) {
-                // mobileNavList[i].classList.add('regular-menu');
                 mobileNavList[i].classList.remove('dark-menu');
             }
-            // burgerIcon.classList.add('regular-menu');
             burgerIcon.classList.remove('dark-menu');
             isMenuVisible = false;
 
@@ -252,7 +256,7 @@
     }
     window.addEventListener(`scroll`, hideOrShowArrow);
 
-    // date in footer
+    // add date in footer
     const currentYear = new Date().getFullYear();
     document.querySelector('.current-year').innerHTML = currentYear;
 
