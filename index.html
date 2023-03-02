@@ -8,11 +8,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@300&family=Poppins:wght@400&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./splide-core.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/splide-core.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/fbc2e650be.js" crossorigin="anonymous"></script>
-    <script src="./splide.min.js"></script>
-    <script src="./splide-extension-auto-scroll.min.js"></script>
+    <script src="./scripts/splide.min.js"></script>
+    <script src="./scripts/splide-extension-auto-scroll.min.js"></script>
     <title>Barbara Johnston</title>
 </head>
 <body>
@@ -53,15 +53,15 @@
             <h1>Barbara Johnston</h1>
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide"><img src="./barb1.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb6.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb3.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb7.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb4.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb9.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb8.png" alt=""></li>
-                    <li class="splide__slide"><img src="./barb2.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb5.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb1.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb6.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb3.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb7.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb4.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb9.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb8.png" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb2.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb5.jpeg" alt=""></li>
                 </ul>
             </div>
         </div>
@@ -79,7 +79,7 @@
             <div class="about-container">
                 <div class="about-headshot">
                     <!-- <div class="headshot-backing"></div> -->
-                    <img src="./headshot.jpg" alt="">
+                    <img src="./images/headshot.jpg" alt="">
                 </div>
                 <div class="about-copy">
                     <p>Barbara (Babz) Johnston is a multiple Dora nominated performer, writer, director and choreographer.  She is best known for her onstage persona “BABZ’; the host of multiple ‘one woman PLUS special guests’ variety shows including the annual Holiday spectacular “JINGLE BABZ & FRIENDS” and the critically acclaimed “BUBBLE BABZ: Songs from the Tub”.  She is an active writer in the Canadian musical theatre scene; collaborating on multiple projects with some of the country’s most prolific Dora Award Winning writers: Anika Johnson, Suzy Wilde and Nick Green.</p>
@@ -101,7 +101,7 @@
             <h2 class="work-headline">What's Coming Up</h2>
             <div class="work-card">
                 <div class="work-image">
-                    <img src="./barb9.jpeg" alt="Love Hurts">
+                    <img src="./images/barb9.jpeg" alt="Love Hurts">
                 </div>
                 <div class="copy-container">
                     <h3 class="copy-title">Love Hurts - Classic Country Covers</h3>
@@ -203,103 +203,6 @@
         </nav>
     </footer>
 </body>
-<script>
-    // burger menu visibility and fucntionality
-    const burgerMenu = document.querySelector('.burger-menu');
-    let isMenuVisible = false;
-    burgerMenu.addEventListener('click', () => {
-        menuVisibilityCheck();
-    });
-
-    const menuVisibilityCheck = () => {
-        const burgerIcon = document.querySelector('.burger-menu a');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const mobileNavList = document.querySelectorAll('.social-list li a');
-        if (!isMenuVisible) {
-            mobileNav.classList.remove('mobile-nav-invisible');
-            mobileNav.classList.add('mobile-nav-visible');
-            for (i = 0; i < mobileNavList.length; i++) {
-                mobileNavList[i].classList.add('dark-menu');
-            }
-            burgerIcon.classList.add('dark-menu')
-            isMenuVisible = true;
-        } else {
-            mobileNav.classList.remove('mobile-nav-visible');
-            for (i = 0; i < mobileNavList.length; i++) {
-                mobileNavList[i].classList.remove('dark-menu');
-            }
-            burgerIcon.classList.remove('dark-menu');
-            isMenuVisible = false;
-
-        }
-    }
-
-    const mobileSelectors = document.querySelectorAll('.mobile-nav-list li a');
-    mobileSelectors.forEach(selector => {
-        selector.addEventListener('click', () => {
-            menuVisibilityCheck();
-        });
-    });
-
-
-    // hide scroll arrow 
-    const scrollArrow = document.querySelector(`.scrollArrow`);
-
-    const hideOrShowArrow = () => {
-        const scrollPos = 20;
-        let windowY = window.scrollY;
-        if (windowY > scrollPos) {
-            scrollArrow.style.display = `none`;
-        } else {
-            scrollArrow.style.display = `block`;
-        }
-    }
-    window.addEventListener(`scroll`, hideOrShowArrow);
-
-    // add date in footer
-    const currentYear = new Date().getFullYear();
-    document.querySelector('.current-year').innerHTML = currentYear;
-
-    // alternating image and text on work cards
-    const workCards = document.querySelectorAll('.work-image');
-    workCards.forEach ( (card, index) => {
-        if (index % 2 != 0) {
-            card.classList.add('even-image-card');
-        }
-    });
-
-    // properties for image carousel
-    const splide = new Splide( '.splide', {
-        arrows: false,
-        pagination: false,
-        type : 'loop',
-        focus : 'center',
-        perPage: 2,
-        breakpoints: {
-            480: {
-                perPage: 1,
-                height: '50vh',
-                width: '100%'
-            },
-        },
-        autoScroll: {
-        speed: 0.15,
-        pauseOnHover : false,
-        pauseOnFocus: false,
-        },
-        width : '100vw',
-        heightRatio: 0.5,
-		height: '80vh',
-        reducedMotion: {
-            autoScroll: {
-                speed: 0.01,
-                pauseOnHover : true,
-                pauseOnFocus: true,
-            },
-        }
-
-    });
-    splide.mount(window.splide.Extensions);
-
+<script src="./scripts/indexScript.js">
   </script>
 </html>

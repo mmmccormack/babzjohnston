@@ -7,11 +7,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fahkwang:wght@300&family=Poppins:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./splide-core.min.css">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/splide-core.min.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <script src="https://kit.fontawesome.com/fbc2e650be.js" crossorigin="anonymous"></script>
-    <script src="./splide.min.js"></script>
-    <script src="./splide-extension-auto-scroll.min.js"></script>
+    <script src="./scripts/splide.min.js"></script>
+    <script src="./scripts/splide-extension-auto-scroll.min.js"></script>
     <title>Barbara Johnston - Work</title>
 </head>
 <body>
@@ -53,15 +53,15 @@
             <h1>work</h1>
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide"><img src="./barb4.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb9.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb8.png" alt=""></li>
-                    <li class="splide__slide"><img src="./barb2.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb5.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb1.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb6.jpg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb3.jpeg" alt=""></li>
-                    <li class="splide__slide"><img src="./barb7.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb4.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb9.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb8.png" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb2.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb5.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb1.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb6.jpg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb3.jpeg" alt=""></li>
+                    <li class="splide__slide"><img src="./images/barb7.jpeg" alt=""></li>
                 </ul>
             </div>
         </div>
@@ -116,7 +116,7 @@
 
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./bubblebabz.jpeg" alt>
+                        <img src="./images/bubblebabz.jpeg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">Bubble Babz: Songs From the Tub</h3>
@@ -134,7 +134,7 @@
                 </div>
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./jinglebabz.jpeg" alt>
+                        <img src="./images/jinglebabz.jpeg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">Jingle Babz: & Friends</h3>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./onesmallstep.jpeg" alt>
+                        <img src="./images/onesmallstep.jpeg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">One Small Step</h3>
@@ -176,7 +176,7 @@
                 </div>
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./bloodties.jpg" alt>
+                        <img src="./images/bloodties.jpg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">Blood Ties</h3>
@@ -199,7 +199,7 @@
                 </div>
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./summerland.jpeg" alt>
+                        <img src="./images/summerland.jpeg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">Summerland</h3>
@@ -226,7 +226,7 @@
                 </div>
                 <div class="work-card-resume">
                     <div class="work-image-resume">
-                        <img src="./bekindrewind.jpeg" alt>
+                        <img src="./images/bekindrewind.jpeg" alt>
                     </div>
                     <div class="copy-container">
                         <h3 class="copy-title">Be Kind, Rewind</h3>
@@ -260,98 +260,5 @@
         </nav>
     </footer>
 </body>
-<script>
-    // burger menu visibility and fucntionality
-    const burgerMenu = document.querySelector('.burger-menu');
-    let isMenuVisible = false;
-    burgerMenu.addEventListener('click', () => {
-        menuVisibilityCheck();
-    });
-
-    const menuVisibilityCheck = () => {
-        const burgerIcon = document.querySelector('.burger-menu a');
-        const mobileNav = document.querySelector('.mobile-nav');
-        const mobileNavList = document.querySelectorAll('.social-list li a');
-        if (!isMenuVisible) {
-            mobileNav.classList.remove('mobile-nav-invisible');
-            mobileNav.classList.add('mobile-nav-visible');
-            for (i = 0; i < mobileNavList.length; i++) {
-                mobileNavList[i].classList.add('dark-menu');
-            }
-            burgerIcon.classList.add('dark-menu')
-            isMenuVisible = true;
-        } else {
-            mobileNav.classList.remove('mobile-nav-visible');
-            for (i = 0; i < mobileNavList.length; i++) {
-                mobileNavList[i].classList.remove('dark-menu');
-            }
-            burgerIcon.classList.remove('dark-menu');
-            isMenuVisible = false;
-
-        }
-    }
-
-    const mobileSelectors = document.querySelectorAll('.mobile-nav-list li a');
-    mobileSelectors.forEach(selector => {
-        selector.addEventListener('click', () => {
-            menuVisibilityCheck();
-        });
-    });
-
-    const workCards = document.querySelectorAll('.work-card');
-    // alternating image and text on work cards
-    const alternateWorkCards = () => {
-        const workCards = Array.from(document.querySelectorAll('.work-image'));
-        const visibleCards = workCards.filter(card => {
-            return window.getComputedStyle(card.parentElement).display != "none"
-        });
-
-        visibleCards.forEach ( (card, index) => {
-            card.classList.remove('even-image-card');
-            if (index % 2 != 0) {
-                card.classList.add('even-image-card');
-            }
-        });
-    }
-    alternateWorkCards();
-
-    // add date in footer
-    const currentYear = new Date().getFullYear();
-    document.querySelector('.current-year').innerHTML = currentYear;
-
-    // properties for image carousel
-    const splide = new Splide( '.splide', {
-        arrows: false,
-        pagination: false,
-        type : 'loop',
-        focus : 'center',
-        perPage: 2,
-        breakpoints: {
-            480: {
-                perPage: 1,
-                height: '50vh',
-                width: '100%'
-            },
-        },
-        autoScroll: {
-        speed: 0.15,
-        pauseOnHover : false,
-        pauseOnFocus: false,
-        },
-        width : '100vw',
-        heightRatio: 0.5,
-		height: '80vh',
-        reducedMotion: {
-            autoScroll: {
-                speed: 0.01,
-                pauseOnHover : true,
-                pauseOnFocus: true,
-            },
-        }
-
-    });
-    splide.mount(window.splide.Extensions);
-
-
-  </script>
+<script src="./scripts/workScript.js"></script>
 </html>
