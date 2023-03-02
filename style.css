@@ -189,7 +189,8 @@
             display: flex;
             align-items: center;
         }
-        .work-image img {
+        .work-image img,
+        .work-image-resume img {
             width: 100%;
         }
         .marquee-quote {
@@ -293,6 +294,14 @@
             background-size: cover;
             border-top: 0px;
         }
+        .spiderwebs {
+            background-image: url("./spiderwebs.jpeg");
+            background-attachment: fixed;
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-top: 0px;
+        }
         .resume {
             height: auto;
             padding: 0 0 50px 0;
@@ -300,13 +309,30 @@
         .resume > p {
             text-align: center;
         }
+        .work-card-resume {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .work-image-resume {
+            margin: 0 auto;
+        }
+        .resume-list {
+            position:relative;
+            top:10px;
+            right:10px;
+        }
         .booking-link {
             padding: 20px 0;
         }
         .booking-link a {
             padding-right: 40px;
         }
-
+        .text-link {
+            color: var(--copyText);
+            text-shadow: none;
+            text-decoration: none;
+        }
         /* contact form styling */
 
         .contact-container {
