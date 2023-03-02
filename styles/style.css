@@ -280,14 +280,14 @@
             text-align: left;
         }
         .wannabe {
-            background-image: url("./images/wannabe.jpg");
+            background-image: url("../images/wannabe.jpg");
             background-attachment: fixed;
             background-position: center top;
             background-repeat: no-repeat;
             background-size: cover;
         }
         .lovehurts {
-            background-image: url("./images/loveHurts.jpeg");
+            background-image: url("../images/loveHurts.jpeg");
             background-attachment: fixed;
             background-position: center top;
             background-repeat: no-repeat;
@@ -295,7 +295,7 @@
             border-top: 0px;
         }
         .spiderwebs {
-            background-image: url("./images/spiderwebs.jpeg");
+            background-image: url("../images/spiderwebs.jpeg");
             background-attachment: fixed;
             background-position: center top;
             background-repeat: no-repeat;
